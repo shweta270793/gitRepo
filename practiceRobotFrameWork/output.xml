@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160307 12:05:30.344" generator="Robot 3.0 (Python 2.7.10 on win32)">
+<suite source="C:\Users\SGOYAL\PycharmProjects\practiceRobotFrameWork\Test\TestOpenBodybeast.robot" id="s1" name="TestOpenBodybeast">
+<test id="s1-t1" name="Test Open BodyBeast">
+<kw name="Open Browser And Hit the URL of Bodybeast" library="BodybeastkeyWords">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${BodybeastURL}</arg>
+<arg>firefox</arg>
+</arguments>
+<msg timestamp="20160307 12:05:30.529" level="INFO">Opening browser 'firefox' to base url 'http://wave1bodybeastdevint.productpartners.com/'</msg>
+<status status="PASS" endtime="20160307 12:05:44.330" starttime="20160307 12:05:30.528"></status>
+</kw>
+<status status="PASS" endtime="20160307 12:05:44.331" starttime="20160307 12:05:30.528"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20160307 12:05:54.331" starttime="20160307 12:05:44.334"></status>
+</kw>
+<kw name="Scroll page" library="BodybeastkeyWords">
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>window.scrollTo(1000,1000)</arg>
+</arguments>
+<msg timestamp="20160307 12:05:54.332" level="INFO">Executing JavaScript:
+window.scrollTo(1000,1000)</msg>
+<status status="PASS" endtime="20160307 12:05:56.055" starttime="20160307 12:05:54.332"></status>
+</kw>
+<status status="PASS" endtime="20160307 12:05:56.056" starttime="20160307 12:05:54.331"></status>
+</kw>
+<kw name="Enter UserName" library="BodybeastkeyWords">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//input[@class='email_field']</arg>
+<arg>test3419@yopmail.com</arg>
+</arguments>
+<msg timestamp="20160307 12:05:56.058" level="INFO">Typing text 'test3419@yopmail.com' into text field 'xpath=//input[@class='email_field']'</msg>
+<status status="PASS" endtime="20160307 12:05:57.128" starttime="20160307 12:05:56.058"></status>
+</kw>
+<status status="PASS" endtime="20160307 12:05:57.128" starttime="20160307 12:05:56.057"></status>
+</kw>
+<kw name="Enter Password" library="BodybeastkeyWords">
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>//input[@id='_58_password']</arg>
+<arg>1111</arg>
+</arguments>
+<msg timestamp="20160307 12:05:57.130" level="INFO">Typing password into text field '//input[@id='_58_password']'</msg>
+<status status="PASS" endtime="20160307 12:05:59.433" starttime="20160307 12:05:57.129"></status>
+</kw>
+<status status="PASS" endtime="20160307 12:05:59.433" starttime="20160307 12:05:57.129"></status>
+</kw>
+<kw name="Click Login button" library="BodybeastkeyWords">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>//input[@id='continueButton']</arg>
+</arguments>
+<msg timestamp="20160307 12:05:59.437" level="INFO">Clicking button '//input[@id='continueButton']'.</msg>
+<status status="PASS" endtime="20160307 12:06:05.656" starttime="20160307 12:05:59.436"></status>
+</kw>
+<status status="PASS" endtime="20160307 12:06:05.656" starttime="20160307 12:05:59.436"></status>
+</kw>
+<status status="PASS" endtime="20160307 12:06:05.656" critical="yes" starttime="20160307 12:05:30.527"></status>
+</test>
+<doc>Suite description</doc>
+<status status="PASS" endtime="20160307 12:06:05.658" starttime="20160307 12:05:30.349"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="TestOpenBodybeast" pass="1">TestOpenBodybeast</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
