@@ -8,7 +8,7 @@ public class Constant {
 
 	public static final String Password = "12345";
 
-	public static final String Path_TestData = "C:/Users/SGOYAL/OIMProjext1/OIMProject/src/test/java/testData/";
+	public static final String Path_TestData = "src/test/java/testData/";
 
 	public static final String File_TestData = "Book1.xlsx";
 
