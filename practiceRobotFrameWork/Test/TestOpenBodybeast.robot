@@ -10,3 +10,4 @@ Test Open BodyBeast
    Enter UserName
    Enter Password
    Click Login button
+   Verify title of bodybeast first page.
