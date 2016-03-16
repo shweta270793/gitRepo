@@ -14,3 +14,5 @@ Enter Password
         input password   //input[@id='_58_password']    ${Password}
 Click Login button
         click button   //input[@id='continueButton']
+Verify title of bodybeast first page.
+        Title Should Be    Body Beast
