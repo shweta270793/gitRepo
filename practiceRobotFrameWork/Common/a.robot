@@ -18,4 +18,3 @@ TBB Free Sign Up Flow
     fill Coach reffered by
     Click on term and condition and captcha
     Click on submit form
-

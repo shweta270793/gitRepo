@@ -2,12 +2,17 @@
 Documentation    Suite description
 Library  Selenium2Library
 Library   robot.libraries.DateTime
+Library   robot.libraries.String
 Resource  ../Locators/Locators.robot
 Resource  ../Locators/Variables.robot
+
 *** Keywords ***
 Create random mail id
+    ${randomEmail}    Generate Random String    5    [LOWER]
     ${date}    Get Current Date        result_format=%Y%m%d
-    ${emailid}       Catenate    SEPARATOR=\n      ${email}  ${date}
+    ${emailidram}       Catenate    SEPARATOR=\n      ${email}  ${date}
+    ${emailid}       Catenate    SEPARATOR=\n      ${emailidram}   ${randomEmail}
+
     [Return]    ${emailid}
 
 
@@ -15,6 +20,7 @@ Open Browser And Hit the URL of Bodybeast
        open browser  ${BodybeastURL}   firefox
 Open Browser And Hit the URL of Tbb
         open browser  ${TbbMainSiteUrl}    firefox
+
 Scroll page
         execute javascript   window.scrollTo(1000,1000)
 Enter UserName
@@ -34,13 +40,12 @@ Click on sign me up for free club
 Enter value of first name and last name
         input text   ${free_User_First_Name}     ${firstname}
         input text   ${free_user_last_name}       ${lastname}
-Enter value of email
+Enter value of email and password
         ${screenname}    Create random mail id
         ${emailIdconfirm}           Catenate              SEPARATOR=@       ${screenname}    beachbodytest.com
         input text    ${free_user_email}          ${emailIdconfirm}
         input text   ${free_user_confirm_email}    ${emailIdconfirm}
         input text   ${free_user_screen_name}    ${screenname}
-Enter value of email and password
         input text   ${free_user_password}             ${password}
         input text   ${free_user_confirm_password}          ${confirm_password}
 
@@ -48,8 +53,9 @@ Enter Date of Birth
         select from list by label   ${DATE_OF_BIRTH_MONTH_DROPDOWN_ID}     January
         select from list by label   ${DATE_OF_BIRTH_DAY_DROPDOWN_ID}    12
         select from list by label   ${DATE_OF_BIRTH_YEAR_DROPDOWN_ID}   1980
-fill Gender Value
+fill phone and Gender Value
         select from list by label      ${free_user_GENDER}      Female
+        input text      ${free_phone}      ${free_phone_value}
 Fill Address
      Input Text     ${SHIPPING_ADDRESS_1}      ${SHIPPING_ADDRESS1_VALUE}
      Input Text     ${SHIPPING_ADDRESS_2}      ${SHIPPING_ADDRESS2_VALUE}
@@ -60,6 +66,7 @@ Fill Address
 fill Coach reffered by
      select from list by label    ${Coach_Reffered_Type}     	Coach I.D.
      input text     ${Coach_value}      994
+     click element   ${confirm_your_coach}
 Click on term and condition and captcha
          Click Element        ${TERMS_AND_CONDITIONS}
             input text   ${captcha}   1111
