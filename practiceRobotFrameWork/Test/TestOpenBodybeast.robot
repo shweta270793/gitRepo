@@ -1,7 +1,8 @@
 *** Settings ***
 Documentation    Suite description
 Library  Selenium2Library
-Resource  ../Keyword/BodybeastkeyWords.robot
+Resource  ../Keyword/Keywords.robot
+
 *** Test Cases ***
 Test Open BodyBeast
    Open Browser And Hit the URL of Bodybeast

@@ -1,0 +1,25 @@
+*** Variables ***
+${BodybeastURL}  http://wave1bodybeastdevint.productpartners.com/
+${TbbMainSiteUrl}   http://www.teambeachbody.com/
+${free_User_First_Name}    id=loginForm.firstName
+${free_User_last_name}     id=loginForm.lastName
+${free_user_email}         id=emailForm.email
+${free_user_confirm_email}      id=emailForm.confirmEmail
+${free_user_password}           name=passwordScreennameForm.password
+${free_user_confirm_password}   name=passwordScreennameForm.confirmPassword
+${free_user_screen_name}        id=screenName
+${DATE_OF_BIRTH_MONTH_DROPDOWN_ID}   id=_TBBSIGNUP_WAR_signuprefactorportlet_birthdayMonth
+${DATE_OF_BIRTH_DAY_DROPDOWN_ID}     id=_TBBSIGNUP_WAR_signuprefactorportlet_birthdayDay
+${DATE_OF_BIRTH_YEAR_DROPDOWN_ID}    id=_TBBSIGNUP_WAR_signuprefactorportlet_birthdayYear
+${free_user_GENDER}         id=gender
+${SHIPPING_ADDRESS_1}     id=shippingAddressForm.street1
+${SHIPPING_ADDRESS_2}     id=shippingAddressForm.street2
+${SHIPPING_ADDRESS_CITY}      id=shippingAddressForm.city
+${SHIPPING_ADDRESS_STATE}     id=addressRegionId
+${SHIPPING_ADDRESS_ZIP}     id=shippingAddressForm.postalCode
+${SHIPPING_ADDRESS_COUNTRY}    id=addressCountryId
+${Coach_Reffered_Type}     id=coachLookupType
+${Coach_value}      id=coachSearchField
+${TERMS_AND_CONDITIONS}    id=termsAndConditionsForm.termsAndConditionsAgree1
+${captcha}      name=_TBBSIGNUP_WAR_signuprefactorportlet_captchaText
+${click_free_submit_button}    id=free_submit
