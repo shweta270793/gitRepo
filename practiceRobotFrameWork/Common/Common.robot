@@ -10,10 +10,11 @@ TBB Free Sign Up Flow
     Click on Not a Member button on Tbb
     Scroll page tbb sign up
     Click on sign me up for free club
+    sleep for specific time
     Enter value of first name and last name
     Enter value of email and password
     Enter Date of Birth
-    fill Gender Value
+    fill phone and Gender Value
     Fill Address
     fill Coach reffered by
     Click on term and condition and captcha
