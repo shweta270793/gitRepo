@@ -12,3 +12,4 @@ Test Open BodyBeast
    Enter Password
    Click Login button
    Verify title of bodybeast first page.
+   [Teardown]

@@ -10,8 +10,8 @@ Resource  ../Locators/Variables.robot
 Create random mail id
     ${randomEmail}    Generate Random String    5    [LOWER]
     ${date}    Get Current Date        result_format=%Y%m%d
-    ${emailidram}       Catenate    SEPARATOR=\n      ${email}  ${date}
-    ${emailid}       Catenate    SEPARATOR=\n      ${emailidram}   ${randomEmail}
+    ${emailidram}       Catenate    SEPARATOR=_      ${email}  ${date}
+    ${emailid}       Catenate    SEPARATOR=_      ${emailidram}   ${randomEmail}
 
     [Return]    ${emailid}
 
@@ -41,13 +41,14 @@ Enter value of first name and last name
         input text   ${free_User_First_Name}     ${firstname}
         input text   ${free_user_last_name}       ${lastname}
 Enter value of email and password
-        ${screenname}    Create random mail id
-        ${emailIdconfirm}           Catenate              SEPARATOR=@       ${screenname}    beachbodytest.com
+        ${generatedMAilId}    Create random mail id
+        ${emailIdconfirm}           Catenate              SEPARATOR=@      ${generatedMAilId}   beachbodytest.com
         input text    ${free_user_email}          ${emailIdconfirm}
         input text   ${free_user_confirm_email}    ${emailIdconfirm}
-        input text   ${free_user_screen_name}    ${screenname}
         input text   ${free_user_password}             ${password}
         input text   ${free_user_confirm_password}          ${confirm_password}
+        ${screenname}    generate random string    10    [LETTERS][NUMBERS]
+        input text   ${free_user_screen_name}    ${screenname}
 
 Enter Date of Birth
         select from list by label   ${DATE_OF_BIRTH_MONTH_DROPDOWN_ID}     January
@@ -64,13 +65,30 @@ Fill Address
      Input Text     ${SHIPPING_ADDRESS_ZIP}      ${SHIPPING_ZIP_VALUE}
      select from list by label         ${SHIPPING_ADDRESS_COUNTRY}     ${SHIPPING_COUNTRY_VALUE}
 fill Coach reffered by
+    wait until element is enabled     ${I_HAVE_A_COACH_SELECT}
      select from list by label    ${Coach_Reffered_Type}     	Coach I.D.
      input text     ${Coach_value}      994
+     wait until element is enabled     ${confirm_your_coach}
      click element   ${confirm_your_coach}
+     wait until element is enabled      ${yes_i_want_corporate}
+
 Click on term and condition and captcha
          Click Element        ${TERMS_AND_CONDITIONS}
             input text   ${captcha}   1111
 Click on submit form
        click button      ${click_free_submit_button}
+
+Verify free user title
+        wait until element is visible     ${Confirm_sign_up_as_free_user}
+#  Bodybeast keywords
+Click on shop and select bodybeast product
+    MOUSE OVER     ${navifation_shop_page}
+    wait until element is visible       ${select_all_product_in_shop_page}
+    click element    ${select_all_product_in_shop_page}
+    execute javascript   window.scrollTo(1000,4000)
+    click element     ${Click_View_Details_Bodybeast_Product}
+
+    click button     continue
+
 
 

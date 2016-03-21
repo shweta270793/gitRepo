@@ -3,7 +3,7 @@ Documentation    Suite description
 Library  Selenium2Library
 Resource  ../Keyword/Keywords.robot
 
-*** Test Cases ***
+*** Keywords ***
 TBB Free Sign Up Flow
     Open Browser And Hit the URL of Tbb
     maximize browser window
@@ -18,4 +18,9 @@ TBB Free Sign Up Flow
     fill Coach reffered by
     Click on term and condition and captcha
     Click on submit form
+    Verify free user title
+
+Body Beast Common Flows
+    Click on shop and select bodybeast product
+
 

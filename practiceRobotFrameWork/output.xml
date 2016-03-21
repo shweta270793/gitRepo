@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20160317 16:46:15.869" generator="Robot 3.0 (Python 2.7.10 on win32)">
-<suite source="C:\Users\SGOYAL\PycharmProjects\gitRepo\practiceRobotFrameWork\Common\a.robot" id="s1" name="A">
-<test id="s1-t1" name="TBB Free Sign Up Flow">
+<robot generated="20160321 13:11:55.876" generator="Robot 3.0 (Python 2.7.10 on win32)">
+<suite source="C:\Users\SGOYAL\PycharmProjects\gitRepo\practiceRobotFrameWork\Test\TbbSignInAsFreeUserAndThenNavigateToBodybeast.robot" id="s1" name="TbbSignInAsFreeUserAndThenNavigateToBodybeast">
+<test id="s1-t1" name="Test Bodybeast Application Via SignUp Flow">
+<kw name="TBB Free Sign Up Flow" library="CommonTBB">
 <kw name="Open Browser And Hit the URL of Tbb" library="Keywords">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to given URL.</doc>
@@ -9,14 +10,14 @@
 <arg>${TbbMainSiteUrl}</arg>
 <arg>firefox</arg>
 </arguments>
-<msg timestamp="20160317 16:46:16.056" level="INFO">Opening browser 'firefox' to base url 'http://wave1tbbqa2.beachbody.local/home'</msg>
-<status status="PASS" endtime="20160317 16:46:32.924" starttime="20160317 16:46:16.054"></status>
+<msg timestamp="20160321 13:11:56.350" level="INFO">Opening browser 'firefox' to base url 'http://wave1tbbdevint.productpartners.com/home'</msg>
+<status status="PASS" endtime="20160321 13:12:14.120" starttime="20160321 13:11:56.349"></status>
 </kw>
-<status status="PASS" endtime="20160317 16:46:32.924" starttime="20160317 16:46:16.053"></status>
+<status status="PASS" endtime="20160321 13:12:14.121" starttime="20160321 13:11:56.349"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20160317 16:47:30.189" starttime="20160317 16:46:32.925"></status>
+<status status="PASS" endtime="20160321 13:12:23.666" starttime="20160321 13:12:14.121"></status>
 </kw>
 <kw name="Click on Not a Member button on Tbb" library="Keywords">
 <kw name="Click Element" library="Selenium2Library">
@@ -24,10 +25,10 @@
 <arguments>
 <arg>//div[@id='banner']/div/ul/li[1]/a</arg>
 </arguments>
-<msg timestamp="20160317 16:47:30.190" level="INFO">Clicking element '//div[@id='banner']/div/ul/li[1]/a'.</msg>
-<status status="PASS" endtime="20160317 16:47:30.957" starttime="20160317 16:47:30.190"></status>
+<msg timestamp="20160321 13:12:23.668" level="INFO">Clicking element '//div[@id='banner']/div/ul/li[1]/a'.</msg>
+<status status="PASS" endtime="20160321 13:12:28.152" starttime="20160321 13:12:23.667"></status>
 </kw>
-<status status="PASS" endtime="20160317 16:47:30.957" starttime="20160317 16:47:30.190"></status>
+<status status="PASS" endtime="20160321 13:12:28.153" starttime="20160321 13:12:23.666"></status>
 </kw>
 <kw name="Scroll page tbb sign up" library="Keywords">
 <kw name="Execute Javascript" library="Selenium2Library">
@@ -35,11 +36,11 @@
 <arguments>
 <arg>window.scrollTo(500,500)</arg>
 </arguments>
-<msg timestamp="20160317 16:47:30.958" level="INFO">Executing JavaScript:
+<msg timestamp="20160321 13:12:28.154" level="INFO">Executing JavaScript:
 window.scrollTo(500,500)</msg>
-<status status="PASS" endtime="20160317 16:47:46.543" starttime="20160317 16:47:30.958"></status>
+<status status="PASS" endtime="20160321 13:12:32.829" starttime="20160321 13:12:28.154"></status>
 </kw>
-<status status="PASS" endtime="20160317 16:47:46.543" starttime="20160317 16:47:30.958"></status>
+<status status="PASS" endtime="20160321 13:12:32.829" starttime="20160321 13:12:28.153"></status>
 </kw>
 <kw name="Click on sign me up for free club" library="Keywords">
 <kw name="Click Element" library="Selenium2Library">
@@ -47,10 +48,10 @@ window.scrollTo(500,500)</msg>
 <arguments>
 <arg>//div[@class='btn_signup_text_1 top_btn_signup_text_1']/a</arg>
 </arguments>
-<msg timestamp="20160317 16:47:46.546" level="INFO">Clicking element '//div[@class='btn_signup_text_1 top_btn_signup_text_1']/a'.</msg>
-<status status="PASS" endtime="20160317 16:47:47.284" starttime="20160317 16:47:46.545"></status>
+<msg timestamp="20160321 13:12:32.831" level="INFO">Clicking element '//div[@class='btn_signup_text_1 top_btn_signup_text_1']/a'.</msg>
+<status status="PASS" endtime="20160321 13:12:33.049" starttime="20160321 13:12:32.830"></status>
 </kw>
-<status status="PASS" endtime="20160317 16:47:47.284" starttime="20160317 16:47:46.544"></status>
+<status status="PASS" endtime="20160321 13:12:33.050" starttime="20160321 13:12:32.829"></status>
 </kw>
 <kw name="Enter value of first name and last name" library="Keywords">
 <kw name="Input Text" library="Selenium2Library">
@@ -59,8 +60,8 @@ window.scrollTo(500,500)</msg>
 <arg>${free_User_First_Name}</arg>
 <arg>${firstname}</arg>
 </arguments>
-<msg timestamp="20160317 16:47:47.286" level="INFO">Typing text 'firstname' into text field 'id=loginForm.firstName'</msg>
-<status status="PASS" endtime="20160317 16:48:06.999" starttime="20160317 16:47:47.285"></status>
+<msg timestamp="20160321 13:12:33.051" level="INFO">Typing text 'firstname' into text field 'id=loginForm.firstName'</msg>
+<status status="PASS" endtime="20160321 13:12:38.869" starttime="20160321 13:12:33.051"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -68,15 +69,15 @@ window.scrollTo(500,500)</msg>
 <arg>${free_user_last_name}</arg>
 <arg>${lastname}</arg>
 </arguments>
-<msg timestamp="20160317 16:48:07.000" level="INFO">Typing text 'lastname' into text field 'id=loginForm.lastName'</msg>
-<status status="PASS" endtime="20160317 16:48:07.281" starttime="20160317 16:48:06.999"></status>
+<msg timestamp="20160321 13:12:38.869" level="INFO">Typing text 'lastname' into text field 'id=loginForm.lastName'</msg>
+<status status="PASS" endtime="20160321 13:12:39.162" starttime="20160321 13:12:38.869"></status>
 </kw>
-<status status="PASS" endtime="20160317 16:48:07.281" starttime="20160317 16:47:47.285"></status>
+<status status="PASS" endtime="20160321 13:12:39.162" starttime="20160321 13:12:33.050"></status>
 </kw>
 <kw name="Enter value of email and password" library="Keywords">
 <kw name="Create random mail id" library="Keywords">
 <assign>
-<var>${screenname}</var>
+<var>${generatedMAilId}</var>
 </assign>
 <kw name="Generate Random String" library="robot.libraries.String">
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
@@ -87,8 +88,8 @@ window.scrollTo(500,500)</msg>
 <assign>
 <var>${randomEmail}</var>
 </assign>
-<msg timestamp="20160317 16:48:07.282" level="INFO">${randomEmail} = dnhst</msg>
-<status status="PASS" endtime="20160317 16:48:07.282" starttime="20160317 16:48:07.282"></status>
+<msg timestamp="20160321 13:12:39.165" level="INFO">${randomEmail} = ibytl</msg>
+<status status="PASS" endtime="20160321 13:12:39.166" starttime="20160321 13:12:39.164"></status>
 </kw>
 <kw name="Get Current Date" library="robot.libraries.DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
@@ -98,57 +99,50 @@ window.scrollTo(500,500)</msg>
 <assign>
 <var>${date}</var>
 </assign>
-<msg timestamp="20160317 16:48:07.283" level="INFO">${date} = 20160317</msg>
-<status status="PASS" endtime="20160317 16:48:07.283" starttime="20160317 16:48:07.283"></status>
+<msg timestamp="20160321 13:12:39.167" level="INFO">${date} = 20160321</msg>
+<status status="PASS" endtime="20160321 13:12:39.167" starttime="20160321 13:12:39.166"></status>
 </kw>
 <kw name="Catenate" library="BuiltIn">
 <doc>Catenates the given items together and returns the resulted string.</doc>
 <arguments>
-<arg>SEPARATOR=\n</arg>
+<arg>SEPARATOR=_</arg>
 <arg>${email}</arg>
 <arg>${date}</arg>
 </arguments>
 <assign>
 <var>${emailidram}</var>
 </assign>
-<msg timestamp="20160317 16:48:07.284" level="INFO">${emailidram} = email
-20160317</msg>
-<status status="PASS" endtime="20160317 16:48:07.284" starttime="20160317 16:48:07.283"></status>
+<msg timestamp="20160321 13:12:39.167" level="INFO">${emailidram} = email_20160321</msg>
+<status status="PASS" endtime="20160321 13:12:39.167" starttime="20160321 13:12:39.167"></status>
 </kw>
 <kw name="Catenate" library="BuiltIn">
 <doc>Catenates the given items together and returns the resulted string.</doc>
 <arguments>
-<arg>SEPARATOR=\n</arg>
+<arg>SEPARATOR=_</arg>
 <arg>${emailidram}</arg>
 <arg>${randomEmail}</arg>
 </arguments>
 <assign>
 <var>${emailid}</var>
 </assign>
-<msg timestamp="20160317 16:48:07.284" level="INFO">${emailid} = email
-20160317
-dnhst</msg>
-<status status="PASS" endtime="20160317 16:48:07.284" starttime="20160317 16:48:07.284"></status>
+<msg timestamp="20160321 13:12:39.168" level="INFO">${emailid} = email_20160321_ibytl</msg>
+<status status="PASS" endtime="20160321 13:12:39.168" starttime="20160321 13:12:39.168"></status>
 </kw>
-<msg timestamp="20160317 16:48:07.285" level="INFO">${screenname} = email
-20160317
-dnhst</msg>
-<status status="PASS" endtime="20160317 16:48:07.285" starttime="20160317 16:48:07.282"></status>
+<msg timestamp="20160321 13:12:39.168" level="INFO">${generatedMAilId} = email_20160321_ibytl</msg>
+<status status="PASS" endtime="20160321 13:12:39.168" starttime="20160321 13:12:39.163"></status>
 </kw>
 <kw name="Catenate" library="BuiltIn">
 <doc>Catenates the given items together and returns the resulted string.</doc>
 <arguments>
 <arg>SEPARATOR=@</arg>
-<arg>${screenname}</arg>
+<arg>${generatedMAilId}</arg>
 <arg>beachbodytest.com</arg>
 </arguments>
 <assign>
 <var>${emailIdconfirm}</var>
 </assign>
-<msg timestamp="20160317 16:48:07.285" level="INFO">${emailIdconfirm} = email
-20160317
-dnhst@beachbodytest.com</msg>
-<status status="PASS" endtime="20160317 16:48:07.285" starttime="20160317 16:48:07.285"></status>
+<msg timestamp="20160321 13:12:39.169" level="INFO">${emailIdconfirm} = email_20160321_ibytl@beachbodytest.com</msg>
+<status status="PASS" endtime="20160321 13:12:39.169" starttime="20160321 13:12:39.169"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -156,10 +150,8 @@ dnhst@beachbodytest.com</msg>
 <arg>${free_user_email}</arg>
 <arg>${emailIdconfirm}</arg>
 </arguments>
-<msg timestamp="20160317 16:48:07.286" level="INFO">Typing text 'email
-20160317
-dnhst@beachbodytest.com' into text field 'id=emailForm.email'</msg>
-<status status="PASS" endtime="20160317 16:48:07.515" starttime="20160317 16:48:07.285"></status>
+<msg timestamp="20160321 13:12:39.170" level="INFO">Typing text 'email_20160321_ibytl@beachbodytest.com' into text field 'id=emailForm.email'</msg>
+<status status="PASS" endtime="20160321 13:12:39.453" starttime="20160321 13:12:39.169"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -167,10 +159,38 @@ dnhst@beachbodytest.com' into text field 'id=emailForm.email'</msg>
 <arg>${free_user_confirm_email}</arg>
 <arg>${emailIdconfirm}</arg>
 </arguments>
-<msg timestamp="20160317 16:48:07.516" level="INFO">Typing text 'email
-20160317
-dnhst@beachbodytest.com' into text field 'id=emailForm.confirmEmail'</msg>
-<status status="PASS" endtime="20160317 16:48:25.362" starttime="20160317 16:48:07.516"></status>
+<msg timestamp="20160321 13:12:39.453" level="INFO">Typing text 'email_20160321_ibytl@beachbodytest.com' into text field 'id=emailForm.confirmEmail'</msg>
+<status status="PASS" endtime="20160321 13:12:39.662" starttime="20160321 13:12:39.453"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${free_user_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20160321 13:12:39.663" level="INFO">Typing text '1111' into text field 'name=passwordScreennameForm.password'</msg>
+<status status="PASS" endtime="20160321 13:12:39.800" starttime="20160321 13:12:39.662"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${free_user_confirm_password}</arg>
+<arg>${confirm_password}</arg>
+</arguments>
+<msg timestamp="20160321 13:12:39.801" level="INFO">Typing text '1111' into text field 'name=passwordScreennameForm.confirmPassword'</msg>
+<status status="PASS" endtime="20160321 13:12:39.981" starttime="20160321 13:12:39.800"></status>
+</kw>
+<kw name="Generate Random String" library="robot.libraries.String">
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<arguments>
+<arg>10</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+</arguments>
+<assign>
+<var>${screenname}</var>
+</assign>
+<msg timestamp="20160321 13:12:39.981" level="INFO">${screenname} = xKLh2LWHt5</msg>
+<status status="PASS" endtime="20160321 13:12:39.981" starttime="20160321 13:12:39.981"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -178,24 +198,268 @@ dnhst@beachbodytest.com' into text field 'id=emailForm.confirmEmail'</msg>
 <arg>${free_user_screen_name}</arg>
 <arg>${screenname}</arg>
 </arguments>
-<msg timestamp="20160317 16:48:25.363" level="INFO">Typing text 'email
-20160317
-dnhst' into text field 'id=screenName'</msg>
+<msg timestamp="20160321 13:12:39.982" level="INFO">Typing text 'xKLh2LWHt5' into text field 'id=screenName'</msg>
+<status status="PASS" endtime="20160321 13:12:40.165" starttime="20160321 13:12:39.982"></status>
+</kw>
+<status status="PASS" endtime="20160321 13:12:40.165" starttime="20160321 13:12:39.163"></status>
+</kw>
+<kw name="Enter Date of Birth" library="Keywords">
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects `*labels` from list identified by `locator`</doc>
+<arguments>
+<arg>${DATE_OF_BIRTH_MONTH_DROPDOWN_ID}</arg>
+<arg>January</arg>
+</arguments>
+<msg timestamp="20160321 13:12:40.167" level="INFO">Selecting label(s) 'January' from list 'id=_TBBSIGNUP_WAR_signuprefactorportlet_birthdayMonth'.</msg>
+<status status="PASS" endtime="20160321 13:12:40.642" starttime="20160321 13:12:40.166"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects `*labels` from list identified by `locator`</doc>
+<arguments>
+<arg>${DATE_OF_BIRTH_DAY_DROPDOWN_ID}</arg>
+<arg>12</arg>
+</arguments>
+<msg timestamp="20160321 13:12:40.643" level="INFO">Selecting label(s) '12' from list 'id=_TBBSIGNUP_WAR_signuprefactorportlet_birthdayDay'.</msg>
+<status status="PASS" endtime="20160321 13:12:41.055" starttime="20160321 13:12:40.642"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects `*labels` from list identified by `locator`</doc>
+<arguments>
+<arg>${DATE_OF_BIRTH_YEAR_DROPDOWN_ID}</arg>
+<arg>1980</arg>
+</arguments>
+<msg timestamp="20160321 13:12:41.056" level="INFO">Selecting label(s) '1980' from list 'id=_TBBSIGNUP_WAR_signuprefactorportlet_birthdayYear'.</msg>
+<status status="PASS" endtime="20160321 13:12:41.502" starttime="20160321 13:12:41.055"></status>
+</kw>
+<status status="PASS" endtime="20160321 13:12:41.502" starttime="20160321 13:12:40.166"></status>
+</kw>
+<kw name="fill phone and Gender Value" library="Keywords">
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects `*labels` from list identified by `locator`</doc>
+<arguments>
+<arg>${free_user_GENDER}</arg>
+<arg>Female</arg>
+</arguments>
+<msg timestamp="20160321 13:12:41.503" level="INFO">Selecting label(s) 'Female' from list 'id=gender'.</msg>
+<status status="PASS" endtime="20160321 13:12:41.972" starttime="20160321 13:12:41.502"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${free_phone}</arg>
+<arg>${free_phone_value}</arg>
+</arguments>
+<msg timestamp="20160321 13:12:41.973" level="INFO">Typing text '1111111111' into text field 'id=phone'</msg>
+<status status="PASS" endtime="20160321 13:12:42.098" starttime="20160321 13:12:41.972"></status>
+</kw>
+<status status="PASS" endtime="20160321 13:12:42.098" starttime="20160321 13:12:41.502"></status>
+</kw>
+<kw name="Fill Address" library="Keywords">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SHIPPING_ADDRESS_1}</arg>
+<arg>${SHIPPING_ADDRESS1_VALUE}</arg>
+</arguments>
+<msg timestamp="20160321 13:12:42.100" level="INFO">Typing text '1284 Broad st' into text field 'id=shippingAddressForm.street1'</msg>
+<status status="PASS" endtime="20160321 13:12:42.282" starttime="20160321 13:12:42.099"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SHIPPING_ADDRESS_2}</arg>
+<arg>${SHIPPING_ADDRESS2_VALUE}</arg>
+</arguments>
+<msg timestamp="20160321 13:12:42.282" level="INFO">Typing text '10' into text field 'id=shippingAddressForm.street2'</msg>
+<status status="PASS" endtime="20160321 13:12:42.438" starttime="20160321 13:12:42.282"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SHIPPING_ADDRESS_CITY}</arg>
+<arg>${SHIPPING_CITY_VALUE}</arg>
+</arguments>
+<msg timestamp="20160321 13:12:42.438" level="INFO">Typing text 'Providence' into text field 'id=shippingAddressForm.city'</msg>
+<status status="PASS" endtime="20160321 13:12:42.620" starttime="20160321 13:12:42.438"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects `*labels` from list identified by `locator`</doc>
+<arguments>
+<arg>${SHIPPING_ADDRESS_STATE}</arg>
+<arg>${SHIPPING_STATE_VALUE}</arg>
+</arguments>
+<msg timestamp="20160321 13:12:42.620" level="INFO">Selecting label(s) 'Rhode Island' from list 'id=addressRegionId'.</msg>
+<status status="PASS" endtime="20160321 13:12:43.090" starttime="20160321 13:12:42.620"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SHIPPING_ADDRESS_ZIP}</arg>
+<arg>${SHIPPING_ZIP_VALUE}</arg>
+</arguments>
+<msg timestamp="20160321 13:12:43.090" level="INFO">Typing text '02905' into text field 'id=shippingAddressForm.postalCode'</msg>
+<status status="PASS" endtime="20160321 13:12:43.272" starttime="20160321 13:12:43.090"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects `*labels` from list identified by `locator`</doc>
+<arguments>
+<arg>${SHIPPING_ADDRESS_COUNTRY}</arg>
+<arg>${SHIPPING_COUNTRY_VALUE}</arg>
+</arguments>
+<msg timestamp="20160321 13:12:43.273" level="INFO">Selecting label(s) 'United States' from list 'id=addressCountryId'.</msg>
+<status status="PASS" endtime="20160321 13:12:43.584" starttime="20160321 13:12:43.272"></status>
+</kw>
+<status status="PASS" endtime="20160321 13:12:43.584" starttime="20160321 13:12:42.099"></status>
+</kw>
+<kw name="fill Coach reffered by" library="Keywords">
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${I_HAVE_A_COACH_SELECT}</arg>
+</arguments>
+<status status="PASS" endtime="20160321 13:12:43.690" starttime="20160321 13:12:43.584"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects `*labels` from list identified by `locator`</doc>
+<arguments>
+<arg>${Coach_Reffered_Type}</arg>
+<arg>Coach I.D.</arg>
+</arguments>
+<msg timestamp="20160321 13:12:43.692" level="INFO">Selecting label(s) 'Coach I.D.' from list 'id=coachLookupType'.</msg>
+<status status="PASS" endtime="20160321 13:12:44.170" starttime="20160321 13:12:43.691"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${Coach_value}</arg>
+<arg>994</arg>
+</arguments>
+<msg timestamp="20160321 13:12:44.170" level="INFO">Typing text '994' into text field 'id=coachSearchField'</msg>
+<status status="PASS" endtime="20160321 13:12:44.350" starttime="20160321 13:12:44.170"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${confirm_your_coach}</arg>
+</arguments>
+<status status="PASS" endtime="20160321 13:12:44.478" starttime="20160321 13:12:44.350"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${confirm_your_coach}</arg>
+</arguments>
+<msg timestamp="20160321 13:12:44.479" level="INFO">Clicking element '//a[@id='_TBBSIGNUP_WAR_signuprefactorportlet_lookupCoachBtn']/span'.</msg>
+<status status="PASS" endtime="20160321 13:12:44.660" starttime="20160321 13:12:44.479"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>${yes_i_want_corporate}</arg>
+</arguments>
+<status status="PASS" endtime="20160321 13:12:46.025" starttime="20160321 13:12:44.660"></status>
+</kw>
+<status status="PASS" endtime="20160321 13:12:46.025" starttime="20160321 13:12:43.584"></status>
+</kw>
+<kw name="Click on term and condition and captcha" library="Keywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${TERMS_AND_CONDITIONS}</arg>
+</arguments>
+<msg timestamp="20160321 13:12:46.026" level="INFO">Clicking element 'id=termsAndConditionsForm.termsAndConditionsAgree1'.</msg>
+<status status="PASS" endtime="20160321 13:12:46.207" starttime="20160321 13:12:46.025"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${captcha}</arg>
+<arg>1111</arg>
+</arguments>
+<msg timestamp="20160321 13:12:46.208" level="INFO">Typing text '1111' into text field 'name=_TBBSIGNUP_WAR_signuprefactorportlet_captchaText'</msg>
+<status status="PASS" endtime="20160321 13:12:46.364" starttime="20160321 13:12:46.207"></status>
+</kw>
+<status status="PASS" endtime="20160321 13:12:46.364" starttime="20160321 13:12:46.025"></status>
+</kw>
+<kw name="Click on submit form" library="Keywords">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${click_free_submit_button}</arg>
+</arguments>
+<msg timestamp="20160321 13:12:46.365" level="INFO">Clicking button 'id=free_submit'.</msg>
+<status status="PASS" endtime="20160321 13:12:52.947" starttime="20160321 13:12:46.364"></status>
+</kw>
+<status status="PASS" endtime="20160321 13:12:52.947" starttime="20160321 13:12:46.364"></status>
+</kw>
+<kw name="Verify free user title" library="Keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${Confirm_sign_up_as_free_user}</arg>
+</arguments>
+<status status="PASS" endtime="20160321 13:12:55.969" starttime="20160321 13:12:52.948"></status>
+</kw>
+<status status="PASS" endtime="20160321 13:12:55.969" starttime="20160321 13:12:52.947"></status>
+</kw>
+<status status="PASS" endtime="20160321 13:12:55.969" starttime="20160321 13:11:56.348"></status>
+</kw>
+<kw name="Body Beast Common Flows" library="CommonTBB">
+<kw name="Click on shop and select bodybeast product" library="Keywords">
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element specified by `locator`.</doc>
+<arguments>
+<arg>${navifation_shop_page}</arg>
+</arguments>
+<msg timestamp="20160321 13:12:55.972" level="INFO">Simulating Mouse Over on element '//div[@id='navigation']/ul/li[9]/a'</msg>
+<status status="PASS" endtime="20160321 13:12:56.254" starttime="20160321 13:12:55.971"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${select_all_product_in_shop_page}</arg>
+</arguments>
+<status status="PASS" endtime="20160321 13:12:56.486" starttime="20160321 13:12:56.254"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${select_all_product_in_shop_page}</arg>
+</arguments>
+<msg timestamp="20160321 13:12:56.487" level="INFO">Clicking element '//div[@id='navigation']/ul/li[9]/ul/li[1]/a'.</msg>
+<status status="PASS" endtime="20160321 13:13:08.920" starttime="20160321 13:12:56.487"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>window.scrollTo(1000,4000)</arg>
+</arguments>
+<msg timestamp="20160321 13:13:08.921" level="INFO">Executing JavaScript:
+window.scrollTo(1000,4000)</msg>
+<status status="PASS" endtime="20160321 13:13:08.949" starttime="20160321 13:13:08.920"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Click_View_Details_Bodybeast_Product}</arg>
+</arguments>
+<msg timestamp="20160321 13:13:08.950" level="INFO">Clicking element '//td[@id='573305_ViewDetailsTD']/a/span'.</msg>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20160317 16:49:49.210" level="FAIL">error: [Errno 10061] No connection could be made because the target machine actively refused it</msg>
-<status status="FAIL" endtime="20160317 16:49:49.210" starttime="20160317 16:49:48.203"></status>
+<msg timestamp="20160321 13:13:13.075" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20160321 13:13:13.075" starttime="20160321 13:13:09.027"></status>
 </kw>
-<msg timestamp="20160317 16:49:49.211" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: error: [Errno 10061] No connection could be made because the target machine actively refused it</msg>
-<msg timestamp="20160317 16:49:49.214" level="FAIL">BadStatusLine: ''</msg>
-<status status="FAIL" endtime="20160317 16:49:49.214" starttime="20160317 16:48:25.363"></status>
+<msg timestamp="20160321 13:13:13.077" level="FAIL">ValueError: Element locator '//td[@id='573305_ViewDetailsTD']/a/span' did not match any elements.</msg>
+<status status="FAIL" endtime="20160321 13:13:13.077" starttime="20160321 13:13:08.950"></status>
 </kw>
-<status status="FAIL" endtime="20160317 16:49:49.215" starttime="20160317 16:48:07.281"></status>
+<status status="FAIL" endtime="20160321 13:13:13.078" starttime="20160321 13:12:55.971"></status>
 </kw>
-<status status="FAIL" endtime="20160317 16:49:49.215" critical="yes" starttime="20160317 16:46:16.052">BadStatusLine: ''</status>
+<status status="FAIL" endtime="20160321 13:13:13.078" starttime="20160321 13:12:55.970"></status>
+</kw>
+<status status="FAIL" endtime="20160321 13:13:13.079" critical="yes" starttime="20160321 13:11:56.347">ValueError: Element locator '//td[@id='573305_ViewDetailsTD']/a/span' did not match any elements.</status>
 </test>
 <doc>Suite description</doc>
-<status status="FAIL" endtime="20160317 16:49:49.217" starttime="20160317 16:46:15.875"></status>
+<status status="FAIL" endtime="20160321 13:13:13.082" starttime="20160321 13:11:55.912"></status>
 </suite>
 <statistics>
 <total>
@@ -205,10 +469,9 @@ dnhst' into text field 'id=screenName'</msg>
 <tag>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="A" pass="0">A</stat>
+<stat fail="1" id="s1" name="TbbSignInAsFreeUserAndThenNavigateToBodybeast" pass="0">TbbSignInAsFreeUserAndThenNavigateToBodybeast</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20160317 16:49:49.211" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: error: [Errno 10061] No connection could be made because the target machine actively refused it</msg>
 </errors>
 </robot>
