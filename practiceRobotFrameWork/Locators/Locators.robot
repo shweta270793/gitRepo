@@ -1,6 +1,5 @@
 *** Variables ***
-${BodybeastURL}  http://wave1bodybeastdevint.productpartners.com/
-${TbbMainSiteUrl}   http://wave1tbbdevint.productpartners.com/home
+
 ${free_User_First_Name}    id=loginForm.firstName
 ${free_User_last_name}     id=loginForm.lastName
 ${free_user_email}         id=emailForm.email
@@ -33,5 +32,34 @@ ${Confirm_sign_up_as_free_user}     //div[@id='p_p_id_TBBSIGNUP_WAR_signuprefact
 
 ${navifation_shop_page}   //div[@id='navigation']/ul/li[9]/a
 ${select_all_product_in_shop_page}     //div[@id='navigation']/ul/li[9]/ul/li[1]/a
-${Click_View_Details_Bodybeast_Product}     //td[@id='573305_ViewDetailsTD']/a/span
-${Select_body_beast_product}     //td[@id='573305_AddToCardTD']/a/span
+${Click_View_Details_Bodybeast_Product}     //td[@id='381734_ViewDetailsTD']/a/span
+${Select_body_beast_product_addTocart}     .//*[@id='productDetailContent']/table/tbody/tr[3]/td/table/tbody/tr/td[2]/table/tbody/tr[6]/td/div/a/span
+${click_checkout_for_bodybeast_product}     //table[@id='Table1']/tbody/tr[3]/td/button[1]
+${click_continue_after_filled_weight}       //div[@id='continueButton']/p
+${huge_beast_bodybeast}        //div[@id='HugeBeast']/div[1][@class='boxheader']/div[1][@class='startButtonDiv yellowButtonGradient']/div[1][@class='startButton']/img
+
+
+
+# p90x Certification site
+${get_qualified_now_p90x}              //ul[@id='nav']/li[2]/a
+${qualification_get_started_button}    //div[@id='role-based']/div[3]/a[@id='qual-buy-now-track']
+ ${emai_for_checkout_p90x}        //div[@class='signfull flt-lft signfullAligned']/input
+ ${Click_continue_after_enter_new_email_p90x}      id=non-member-submit-track
+ ${new_user_first_name_p90x}     name=firstName
+ ${new_user_last_name_p90x}       name=lastName
+ ${new_user_Address1_p90x}         name=addressLine1
+ ${new_user_Address2_p90x}           name=addressLine2
+ ${new_user_City_p90x}             name=city
+ ${new_user_state_p90x}             name=stateId
+ ${new_user_zip_code_p90x}         name=zipCode
+ ${new_user_phone_no_p90x}          name=phoneNumber
+ ${continue_after_fill_shipping_info}   id=qual-ship-info-cont
+ ${screen_name_new_user_p90x}          //input[@id='screenName']
+ ${Password_new_user_p90x}              //input[@id='password']
+ ${reenter_password_name_new_user_p90x}     //input[@id='repeatPassword']
+ ${Reffered_coach_rep_no_new_user_p90x}     //select[@id='coach-search-criteria-type']
+ ${Reffered_coach_filled_rep_no_new_user_p90x}      //input[@id='coach-search-criteria-value']
+ ${Reffered_confirm_coach_new_user_p90x}            //a[contains(text(),'Confirm Coach')]
+ ${Reffered_confirm_coach_text_new_user_p90x}           //span[@id='find-coach-success-message'][contains(text(),'Yes')]
+${term_and_condition_p90x}              //input[@id='termsAndConditionsAcceptedChkBox']
+${click_continue_Create_account_page_p90x}          //input[@id='qual-updateAccountProfileBtn']

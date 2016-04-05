@@ -47,7 +47,7 @@ Enter value of email and password
         input text   ${free_user_confirm_email}    ${emailIdconfirm}
         input text   ${free_user_password}             ${password}
         input text   ${free_user_confirm_password}          ${confirm_password}
-        ${screenname}    generate random string    10    [LETTERS][NUMBERS]
+        ${screenname}    generate random string    15    [LETTERS][NUMBERS]
         input text   ${free_user_screen_name}    ${screenname}
 
 Enter Date of Birth
@@ -80,15 +80,80 @@ Click on submit form
 
 Verify free user title
         wait until element is visible     ${Confirm_sign_up_as_free_user}
+
+
+
 #  Bodybeast keywords
 Click on shop and select bodybeast product
     MOUSE OVER     ${navifation_shop_page}
     wait until element is visible       ${select_all_product_in_shop_page}
     click element    ${select_all_product_in_shop_page}
-    execute javascript   window.scrollTo(1000,4000)
-    click element     ${Click_View_Details_Bodybeast_Product}
+    execute javascript   window.scrollTo(1000,3200)
+    click element      ${Click_View_Details_Bodybeast_Product}
+    click element      ${Select_body_beast_product_addTocart}
 
-    click button     continue
+Click on checkout to purchase bodybeast
+    click element     ${click_checkout_for_bodybeast_product}
+Enter UserName and password for bodybeast user
+        input text     xpath=//input[@class='email_field']    ${UserName}
+        input password   //input[@id='_58_password']    ${Password}
+        click button   //input[@id='continueButton']
+
+
+Click on OK on GetStarted page and also verify title
+        Title Should Be    Body Beast
+        click element       //div[@id='okButton']/p
+Fill details of step one of 2 in body beast App
+        click element    //a[contains (text(),'Female')]
+        clear element text      id=weightId
+        input text     id=weightId      31
+        clear element text     id=bodyFatId
+        input text      id=bodyFatId      38
+        click element    //div[@id='continueButton']/p
+Click continue after fill weight and all
+        click element    ${click_continue_after_filled_weight}
+Click on hugebeast start button.
+        click element     ${huge_beast_bodybeast}
+
+
+#P90x Certification Site
+
+open P90x site on browser
+    open browser  ${p90x_Certification_URL}    firefox
+Click the GET CERTIFIED NOW button in the global navigation
+        click element     ${get_qualified_now_p90x}
+        wait until element is visible     ${qualification_get_started_button}
+        click element      ${qualification_get_started_button}
+On the checkout page, enter a new email address to enroll a new customer P90x
+        ${generatedMAilId}    Create random mail id
+        ${emailIdconfirm}           Catenate              SEPARATOR=@      ${generatedMAilId}   beachbodytest.com
+        input text    ${emai_for_checkout_p90x}          ${emailIdconfirm}
+        click button    ${Click_continue_after_enter_new_email_p90x}
+
+fill shiping information page in p90x
+        input text          ${new_user_first_name_p90x}       ${firstname}
+        input text          ${new_user_last_name_p90x}        ${lastname}
+        input text          ${new_user_Address1_p90x}         ${shipping_address1_value}
+        input text          ${new_user_Address2_p90x}          ${shipping_address2_value}
+        input text          ${new_user_City_p90x}            ${shipping_city_value}
+        select from list by label          ${new_user_state_p90x}             ${shipping_state_value}
+        input text          ${new_user_zip_code_p90x}         ${shipping_zip_value}
+        input text          ${new_user_phone_no_p90x}          ${free_phone_value}
+        click button        ${continue_after_fill_shipping_info}
+
+fill create account page in p90x
+        ${screenname_p90x}    generate random string    15    [LETTERS][NUMBERS]
+        input text           ${screen_name_new_user_p90x}      ${screenname_p90x}
+        input text             ${Password_new_user_p90x}        ${Password}
+        input text              ${reenter_password_name_new_user_p90x}           ${Password}
+        select from list by label       ${Reffered_coach_rep_no_new_user_p90x}          Rep Number
+        input text               ${Reffered_coach_filled_rep_no_new_user_p90x}          ${reffering_coach_id}
+        wait until element is visible           ${Reffered_confirm_coach_new_user_p90x}
+        click element             ${Reffered_confirm_coach_new_user_p90x}
+        wait until element is visible        ${Reffered_confirm_coach_text_new_user_p90x}
+        click element           ${term_and_condition_p90x}
+        click button        ${click_continue_Create_account_page_p90x}
+fill payment Information in P90x
 
 
 

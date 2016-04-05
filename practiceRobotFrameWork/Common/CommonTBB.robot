@@ -22,5 +22,6 @@ TBB Free Sign Up Flow
 
 Body Beast Common Flows
     Click on shop and select bodybeast product
+    Click on checkout to purchase bodybeast
 
 
