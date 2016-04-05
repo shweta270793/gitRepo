@@ -15,7 +15,6 @@ Create random mail id
 
     [Return]    ${emailid}
 
-
 Open Browser And Hit the URL of Bodybeast
        open browser  ${BodybeastURL}   firefox
 Open Browser And Hit the URL of Tbb
@@ -124,6 +123,12 @@ Click the GET CERTIFIED NOW button in the global navigation
         click element     ${get_qualified_now_p90x}
         wait until element is visible     ${qualification_get_started_button}
         click element      ${qualification_get_started_button}
+
+Click the Find An Instructor Workshop button in the global navigation
+     click element      ${instructor_workshop_p90x}
+     click element      ${register_instructor_workshop_p90x}
+     click element      ${enrol_button_p90x}
+
 On the checkout page, enter a new email address to enroll a new customer P90x
         ${generatedMAilId}    Create random mail id
         ${emailIdconfirm}           Catenate              SEPARATOR=@      ${generatedMAilId}   beachbodytest.com
