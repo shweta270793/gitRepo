@@ -63,3 +63,14 @@ ${qualification_get_started_button}    //div[@id='role-based']/div[3]/a[@id='qua
  ${Reffered_confirm_coach_text_new_user_p90x}           //span[@id='find-coach-success-message'][contains(text(),'Yes')]
 ${term_and_condition_p90x}              //input[@id='termsAndConditionsAcceptedChkBox']
 ${click_continue_Create_account_page_p90x}          //input[@id='qual-updateAccountProfileBtn']
+${credit_card_no_p90x_payment_page}                        id=creditCardNumber
+${credit_Card_security_pin_p90x}            //input[@name='securityCode']
+${credit_Card_month_p90x}               //select[@id='monthpicker']
+${credit_Card_year_p90x}                //select[@id='yearpicker']
+${term_and_condition_payment_info_page}     id=paymentTermsAndConditionsChkBox
+${click_purchase_on_payment_page_p90x}          id=qual-purchaseBtn
+${verify_qualification_confirmation_page_p90x}      //a[@id='confirmation-qual-home-track']
+${shop_button_global_navigation_p90x}               //ul[@id='nav']/li[4]/a
+${shop_page_verification_text}              //h2[contains(@text='Shop all P90X Products')]
+${select_a_product_on_p90x_shop}            //img[@title='P90X Colin Sleeveless Crew']
+${select_size_on_p90x_shop_page}            //select[@id='attributes']

@@ -154,6 +154,23 @@ fill create account page in p90x
         click element           ${term_and_condition_p90x}
         click button        ${click_continue_Create_account_page_p90x}
 fill payment Information in P90x
+        input text        ${credit_card_no_p90x_payment_page}      ${credit_card_no}
+        input text          ${credit_Card_security_pin_p90x}        ${credit_Card_pin}
+        select from list by label           ${credit_Card_month_p90x}           Jun
+         select from list by label          ${credit_Card_year_p90x}            2020
+         click element          ${term_and_condition_payment_info_page}
+         click button         ${click_purchase_on_payment_page_p90x}
+
+Verify qualification is purchased on P90X
+        wait until element is visible     ${verify_qualification_confirmation_page_p90x}        timeout=40s
+
+Click on shop in the global navigation p90x
+        click element       ${shop_button_global_navigation_p90x}
+Verify that shop page is open and select a product
+        wait until element is visible           ${shop_page_verification_text}
+        click element                ${select_a_product_on_p90x_shop}
+        select from list by label       ${select_size_on_p90x_shop_page}        XL-marine/charcoal
+
 
 
 

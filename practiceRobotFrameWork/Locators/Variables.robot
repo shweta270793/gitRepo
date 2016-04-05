@@ -18,3 +18,5 @@ ${SHIPPING_COUNTRY_VALUE}    United States
 ${SHIPPING_ZIP_VALUE}    02905
 ${Reffering_Coach_ID}               994
 ${Reffering_Coach_confirm_text}         Yes
+${credit_card_no}               1111111111111111
+${credit_Card_pin}              123
