@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20160405 15:52:37.300" generator="Robot 3.0 (Python 2.7.10 on win32)">
-<suite source="C:\Users\SGOYAL\PycharmProjects\gitRepo\practiceRobotFrameWork\Test\P90x_Purchase_Qualification.robot" id="s1" name="P90x Purchase Qualification">
+<robot generated="20160413 15:53:52.457" generator="Robot 3.0 (Python 2.7.10 on win32)">
+<suite source="C:\Users\SGOYAL\PycharmProjects\gitRepo\practiceRobotFrameWork\Test\p90x_Purchase_Product_Shop_page.robot" id="s1" name="p90x Purchase Product Shop page">
 <test id="s1-t1" name="Test P90x Certification site">
 <kw name="open P90x site on browser" library="Keywords">
 <kw name="Open Browser" library="Selenium2Library">
@@ -9,40 +9,86 @@
 <arg>${p90x_Certification_URL}</arg>
 <arg>firefox</arg>
 </arguments>
-<msg timestamp="20160405 15:52:41.395" level="INFO">Opening browser 'firefox' to base url 'http://p90xcertification.tbbint.com'</msg>
-<status status="PASS" endtime="20160405 15:52:58.289" starttime="20160405 15:52:41.394"></status>
+<msg timestamp="20160413 15:53:53.251" level="INFO">Opening browser 'firefox' to base url 'http://p90xcertification.tbbint.com'</msg>
+<status status="PASS" endtime="20160413 15:54:15.380" starttime="20160413 15:53:53.251"></status>
 </kw>
-<status status="PASS" endtime="20160405 15:52:58.290" starttime="20160405 15:52:41.391"></status>
+<status status="PASS" endtime="20160413 15:54:15.381" starttime="20160413 15:53:53.251"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20160405 15:53:24.631" starttime="20160405 15:52:58.291"></status>
+<status status="PASS" endtime="20160413 15:54:31.589" starttime="20160413 15:54:15.384"></status>
 </kw>
-<kw name="Click the GET CERTIFIED NOW button in the global navigation" library="Keywords">
+<kw name="Click on shop in the global navigation p90x" library="Keywords">
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>${get_qualified_now_p90x}</arg>
+<arg>${shop_button_global_navigation_p90x}</arg>
 </arguments>
-<msg timestamp="20160405 15:53:24.635" level="INFO">Clicking element '//ul[@id='nav']/li[2]/a'.</msg>
-<status status="PASS" endtime="20160405 15:53:31.194" starttime="20160405 15:53:24.633"></status>
+<msg timestamp="20160413 15:54:31.593" level="INFO">Clicking element '//ul[@id='nav']/li[4]/a'.</msg>
+<status status="PASS" endtime="20160413 15:54:32.786" starttime="20160413 15:54:31.592"></status>
 </kw>
+<status status="PASS" endtime="20160413 15:54:32.786" starttime="20160413 15:54:31.591"></status>
+</kw>
+<kw name="Verify that shop page is open and select a product" library="Keywords">
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>${qualification_get_started_button}</arg>
+<arg>${shop_page_verification_text}</arg>
 </arguments>
-<status status="PASS" endtime="20160405 15:53:42.735" starttime="20160405 15:53:31.195"></status>
+<status status="PASS" endtime="20160413 15:54:45.550" starttime="20160413 15:54:32.788"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>${qualification_get_started_button}</arg>
+<arg>${select_a_product_on_p90x_shop}</arg>
 </arguments>
-<msg timestamp="20160405 15:53:42.737" level="INFO">Clicking element '//div[@id='role-based']/div[3]/a[@id='qual-buy-now-track']'.</msg>
-<status status="PASS" endtime="20160405 15:53:43.732" starttime="20160405 15:53:42.735"></status>
+<msg timestamp="20160413 15:54:45.551" level="INFO">Clicking element '//img[@title='P90X Jayne X-Cross Tank']'.</msg>
+<status status="PASS" endtime="20160413 15:54:46.496" starttime="20160413 15:54:45.550"></status>
 </kw>
-<status status="PASS" endtime="20160405 15:53:43.733" starttime="20160405 15:53:24.632"></status>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects `*labels` from list identified by `locator`</doc>
+<arguments>
+<arg>${select_size_on_p90x_shop_page}</arg>
+<arg>M-purple</arg>
+</arguments>
+<msg timestamp="20160413 15:54:46.498" level="INFO">Selecting label(s) 'M-purple' from list '//select[@id='attributes']'.</msg>
+<status status="PASS" endtime="20160413 15:54:47.942" starttime="20160413 15:54:46.497"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${add_to_cart_p90x_Shop_page}</arg>
+</arguments>
+<msg timestamp="20160413 15:54:47.943" level="INFO">Clicking element '//button[contains(text(),'Add to cart')]'.</msg>
+<status status="PASS" endtime="20160413 15:54:48.232" starttime="20160413 15:54:47.942"></status>
+</kw>
+<status status="PASS" endtime="20160413 15:54:48.233" starttime="20160413 15:54:32.787"></status>
+</kw>
+<kw name="Verify that mini cart is open in p90x shop page" library="Keywords">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${view_mini_cart_p90x_shop_page}</arg>
+</arguments>
+<status status="PASS" endtime="20160413 15:54:49.781" starttime="20160413 15:54:48.236"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${view_mini_cart_p90x_shop_page}</arg>
+</arguments>
+<msg timestamp="20160413 15:54:49.783" level="INFO">Clicking element '//a[contains(text(),'View Cart')]'.</msg>
+<status status="PASS" endtime="20160413 15:54:50.695" starttime="20160413 15:54:49.781"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${click_chackout_on_cart_page_p90x}</arg>
+</arguments>
+<msg timestamp="20160413 15:54:50.696" level="INFO">Clicking element '//div[@id='megaCartContainer']/ul[2]/li[2]/a'.</msg>
+<status status="PASS" endtime="20160413 15:55:00.413" starttime="20160413 15:54:50.695"></status>
+</kw>
+<status status="PASS" endtime="20160413 15:55:00.414" starttime="20160413 15:54:48.234"></status>
 </kw>
 <kw name="On the checkout page, enter a new email address to enroll a new customer P90x" library="Keywords">
 <kw name="Create random mail id" library="Keywords">
@@ -58,8 +104,8 @@
 <assign>
 <var>${randomEmail}</var>
 </assign>
-<msg timestamp="20160405 15:53:43.741" level="INFO">${randomEmail} = jcxxg</msg>
-<status status="PASS" endtime="20160405 15:53:43.741" starttime="20160405 15:53:43.739"></status>
+<msg timestamp="20160413 15:55:00.421" level="INFO">${randomEmail} = blpeo</msg>
+<status status="PASS" endtime="20160413 15:55:00.421" starttime="20160413 15:55:00.418"></status>
 </kw>
 <kw name="Get Current Date" library="robot.libraries.DateTime">
 <doc>Returns current local or UTC time with an optional increment.</doc>
@@ -69,8 +115,8 @@
 <assign>
 <var>${date}</var>
 </assign>
-<msg timestamp="20160405 15:53:43.757" level="INFO">${date} = 20160405</msg>
-<status status="PASS" endtime="20160405 15:53:43.758" starttime="20160405 15:53:43.742"></status>
+<msg timestamp="20160413 15:55:00.424" level="INFO">${date} = 20160413</msg>
+<status status="PASS" endtime="20160413 15:55:00.424" starttime="20160413 15:55:00.422"></status>
 </kw>
 <kw name="Catenate" library="BuiltIn">
 <doc>Catenates the given items together and returns the resulted string.</doc>
@@ -82,8 +128,8 @@
 <assign>
 <var>${emailidram}</var>
 </assign>
-<msg timestamp="20160405 15:53:43.761" level="INFO">${emailidram} = email_20160405</msg>
-<status status="PASS" endtime="20160405 15:53:43.761" starttime="20160405 15:53:43.759"></status>
+<msg timestamp="20160413 15:55:00.426" level="INFO">${emailidram} = email_20160413</msg>
+<status status="PASS" endtime="20160413 15:55:00.426" starttime="20160413 15:55:00.425"></status>
 </kw>
 <kw name="Catenate" library="BuiltIn">
 <doc>Catenates the given items together and returns the resulted string.</doc>
@@ -95,11 +141,11 @@
 <assign>
 <var>${emailid}</var>
 </assign>
-<msg timestamp="20160405 15:53:43.764" level="INFO">${emailid} = email_20160405_jcxxg</msg>
-<status status="PASS" endtime="20160405 15:53:43.765" starttime="20160405 15:53:43.762"></status>
+<msg timestamp="20160413 15:55:00.428" level="INFO">${emailid} = email_20160413_blpeo</msg>
+<status status="PASS" endtime="20160413 15:55:00.428" starttime="20160413 15:55:00.427"></status>
 </kw>
-<msg timestamp="20160405 15:53:43.766" level="INFO">${generatedMAilId} = email_20160405_jcxxg</msg>
-<status status="PASS" endtime="20160405 15:53:43.766" starttime="20160405 15:53:43.737"></status>
+<msg timestamp="20160413 15:55:00.429" level="INFO">${generatedMAilId} = email_20160413_blpeo</msg>
+<status status="PASS" endtime="20160413 15:55:00.429" starttime="20160413 15:55:00.416"></status>
 </kw>
 <kw name="Catenate" library="BuiltIn">
 <doc>Catenates the given items together and returns the resulted string.</doc>
@@ -111,8 +157,8 @@
 <assign>
 <var>${emailIdconfirm}</var>
 </assign>
-<msg timestamp="20160405 15:53:43.769" level="INFO">${emailIdconfirm} = email_20160405_jcxxg@beachbodytest.com</msg>
-<status status="PASS" endtime="20160405 15:53:43.769" starttime="20160405 15:53:43.767"></status>
+<msg timestamp="20160413 15:55:00.431" level="INFO">${emailIdconfirm} = email_20160413_blpeo@beachbodytest.com</msg>
+<status status="PASS" endtime="20160413 15:55:00.431" starttime="20160413 15:55:00.430"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -120,18 +166,18 @@
 <arg>${emai_for_checkout_p90x}</arg>
 <arg>${emailIdconfirm}</arg>
 </arguments>
-<msg timestamp="20160405 15:53:43.772" level="INFO">Typing text 'email_20160405_jcxxg@beachbodytest.com' into text field '//div[@class='signfull flt-lft signfullAligned']/input'</msg>
-<status status="PASS" endtime="20160405 15:54:03.974" starttime="20160405 15:53:43.770"></status>
+<msg timestamp="20160413 15:55:00.433" level="INFO">Typing text 'email_20160413_blpeo@beachbodytest.com' into text field '//div[@class='signfull flt-lft signfullAligned']/input'</msg>
+<status status="PASS" endtime="20160413 15:55:13.653" starttime="20160413 15:55:00.432"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks a button identified by `locator`.</doc>
 <arguments>
 <arg>${Click_continue_after_enter_new_email_p90x}</arg>
 </arguments>
-<msg timestamp="20160405 15:54:03.977" level="INFO">Clicking button 'id=non-member-submit-track'.</msg>
-<status status="PASS" endtime="20160405 15:54:11.333" starttime="20160405 15:54:03.975"></status>
+<msg timestamp="20160413 15:55:13.655" level="INFO">Clicking button 'id=non-member-submit-track'.</msg>
+<status status="PASS" endtime="20160413 15:55:20.898" starttime="20160413 15:55:13.653"></status>
 </kw>
-<status status="PASS" endtime="20160405 15:54:11.334" starttime="20160405 15:53:43.735"></status>
+<status status="PASS" endtime="20160413 15:55:20.899" starttime="20160413 15:55:00.415"></status>
 </kw>
 <kw name="fill shiping information page in p90x" library="Keywords">
 <kw name="Input Text" library="Selenium2Library">
@@ -140,8 +186,8 @@
 <arg>${new_user_first_name_p90x}</arg>
 <arg>${firstname}</arg>
 </arguments>
-<msg timestamp="20160405 15:54:11.339" level="INFO">Typing text 'firstname' into text field 'name=firstName'</msg>
-<status status="PASS" endtime="20160405 15:54:11.879" starttime="20160405 15:54:11.337"></status>
+<msg timestamp="20160413 15:55:20.904" level="INFO">Typing text 'firstname' into text field 'name=firstName'</msg>
+<status status="PASS" endtime="20160413 15:55:21.444" starttime="20160413 15:55:20.902"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -149,8 +195,8 @@
 <arg>${new_user_last_name_p90x}</arg>
 <arg>${lastname}</arg>
 </arguments>
-<msg timestamp="20160405 15:54:11.881" level="INFO">Typing text 'lastname' into text field 'name=lastName'</msg>
-<status status="PASS" endtime="20160405 15:54:12.373" starttime="20160405 15:54:11.879"></status>
+<msg timestamp="20160413 15:55:21.446" level="INFO">Typing text 'lastname' into text field 'name=lastName'</msg>
+<status status="PASS" endtime="20160413 15:55:21.784" starttime="20160413 15:55:21.445"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -158,8 +204,8 @@
 <arg>${new_user_Address1_p90x}</arg>
 <arg>${shipping_address1_value}</arg>
 </arguments>
-<msg timestamp="20160405 15:54:12.375" level="INFO">Typing text '1284 Broad st' into text field 'name=addressLine1'</msg>
-<status status="PASS" endtime="20160405 15:54:12.694" starttime="20160405 15:54:12.374"></status>
+<msg timestamp="20160413 15:55:21.786" level="INFO">Typing text '1284 Broad st' into text field 'name=addressLine1'</msg>
+<status status="PASS" endtime="20160413 15:55:22.097" starttime="20160413 15:55:21.785"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -167,8 +213,8 @@
 <arg>${new_user_Address2_p90x}</arg>
 <arg>${shipping_address2_value}</arg>
 </arguments>
-<msg timestamp="20160405 15:54:12.696" level="INFO">Typing text '10' into text field 'name=addressLine2'</msg>
-<status status="PASS" endtime="20160405 15:54:12.964" starttime="20160405 15:54:12.695"></status>
+<msg timestamp="20160413 15:55:22.099" level="INFO">Typing text '10' into text field 'name=addressLine2'</msg>
+<status status="PASS" endtime="20160413 15:55:22.312" starttime="20160413 15:55:22.097"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -176,8 +222,8 @@
 <arg>${new_user_City_p90x}</arg>
 <arg>${shipping_city_value}</arg>
 </arguments>
-<msg timestamp="20160405 15:54:13.001" level="INFO">Typing text 'Providence' into text field 'name=city'</msg>
-<status status="PASS" endtime="20160405 15:54:13.342" starttime="20160405 15:54:12.965"></status>
+<msg timestamp="20160413 15:55:22.314" level="INFO">Typing text 'Providence' into text field 'name=city'</msg>
+<status status="PASS" endtime="20160413 15:55:22.554" starttime="20160413 15:55:22.313"></status>
 </kw>
 <kw name="Select From List By Label" library="Selenium2Library">
 <doc>Selects `*labels` from list identified by `locator`</doc>
@@ -185,8 +231,8 @@
 <arg>${new_user_state_p90x}</arg>
 <arg>${shipping_state_value}</arg>
 </arguments>
-<msg timestamp="20160405 15:54:13.345" level="INFO">Selecting label(s) 'Rhode Island' from list 'name=stateId'.</msg>
-<status status="PASS" endtime="20160405 15:54:14.230" starttime="20160405 15:54:13.343"></status>
+<msg timestamp="20160413 15:55:22.555" level="INFO">Selecting label(s) 'Rhode Island' from list 'name=stateId'.</msg>
+<status status="PASS" endtime="20160413 15:55:23.243" starttime="20160413 15:55:22.554"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -194,8 +240,8 @@
 <arg>${new_user_zip_code_p90x}</arg>
 <arg>${shipping_zip_value}</arg>
 </arguments>
-<msg timestamp="20160405 15:54:14.231" level="INFO">Typing text '02905' into text field 'name=zipCode'</msg>
-<status status="PASS" endtime="20160405 15:54:14.446" starttime="20160405 15:54:14.230"></status>
+<msg timestamp="20160413 15:55:23.246" level="INFO">Typing text '02905' into text field 'name=zipCode'</msg>
+<status status="PASS" endtime="20160413 15:55:23.540" starttime="20160413 15:55:23.244"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -203,18 +249,21 @@
 <arg>${new_user_phone_no_p90x}</arg>
 <arg>${free_phone_value}</arg>
 </arguments>
-<msg timestamp="20160405 15:54:14.448" level="INFO">Typing text '1111111111' into text field 'name=phoneNumber'</msg>
-<status status="PASS" endtime="20160405 15:54:14.789" starttime="20160405 15:54:14.447"></status>
+<msg timestamp="20160413 15:55:23.542" level="INFO">Typing text '1111111111' into text field 'name=phoneNumber'</msg>
+<status status="PASS" endtime="20160413 15:55:23.812" starttime="20160413 15:55:23.541"></status>
 </kw>
+<status status="PASS" endtime="20160413 15:55:23.813" starttime="20160413 15:55:20.900"></status>
+</kw>
+<kw name="Click continue button in P90x shop shipping info Page" library="Keywords">
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks a button identified by `locator`.</doc>
 <arguments>
-<arg>${continue_after_fill_shipping_info}</arg>
+<arg>${click_continue_shipping_Info_shop_page_p90x}</arg>
 </arguments>
-<msg timestamp="20160405 15:54:14.791" level="INFO">Clicking button 'id=qual-ship-info-cont'.</msg>
-<status status="PASS" endtime="20160405 15:54:23.044" starttime="20160405 15:54:14.789"></status>
+<msg timestamp="20160413 15:55:23.817" level="INFO">Clicking button 'id=cert-ship-info-cont'.</msg>
+<status status="PASS" endtime="20160413 15:55:30.627" starttime="20160413 15:55:23.816"></status>
 </kw>
-<status status="PASS" endtime="20160405 15:54:23.045" starttime="20160405 15:54:11.336"></status>
+<status status="PASS" endtime="20160413 15:55:30.627" starttime="20160413 15:55:23.814"></status>
 </kw>
 <kw name="fill create account page in p90x" library="Keywords">
 <kw name="Generate Random String" library="robot.libraries.String">
@@ -226,8 +275,8 @@
 <assign>
 <var>${screenname_p90x}</var>
 </assign>
-<msg timestamp="20160405 15:54:23.049" level="INFO">${screenname_p90x} = ZPbvNC9DrmpKnth</msg>
-<status status="PASS" endtime="20160405 15:54:23.049" starttime="20160405 15:54:23.048"></status>
+<msg timestamp="20160413 15:55:30.630" level="INFO">${screenname_p90x} = gx3n0daIJErS5PQ</msg>
+<status status="PASS" endtime="20160413 15:55:30.630" starttime="20160413 15:55:30.629"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -235,8 +284,8 @@
 <arg>${screen_name_new_user_p90x}</arg>
 <arg>${screenname_p90x}</arg>
 </arguments>
-<msg timestamp="20160405 15:54:23.052" level="INFO">Typing text 'ZPbvNC9DrmpKnth' into text field '//input[@id='screenName']'</msg>
-<status status="PASS" endtime="20160405 15:54:23.486" starttime="20160405 15:54:23.050"></status>
+<msg timestamp="20160413 15:55:30.632" level="INFO">Typing text 'gx3n0daIJErS5PQ' into text field '//input[@id='screenName']'</msg>
+<status status="PASS" endtime="20160413 15:55:30.927" starttime="20160413 15:55:30.631"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -244,8 +293,8 @@
 <arg>${Password_new_user_p90x}</arg>
 <arg>${Password}</arg>
 </arguments>
-<msg timestamp="20160405 15:54:23.489" level="INFO">Typing text '1111' into text field '//input[@id='password']'</msg>
-<status status="PASS" endtime="20160405 15:54:23.717" starttime="20160405 15:54:23.487"></status>
+<msg timestamp="20160413 15:55:30.929" level="INFO">Typing text '1111' into text field '//input[@id='password']'</msg>
+<status status="PASS" endtime="20160413 15:55:31.198" starttime="20160413 15:55:30.928"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -253,8 +302,8 @@
 <arg>${reenter_password_name_new_user_p90x}</arg>
 <arg>${Password}</arg>
 </arguments>
-<msg timestamp="20160405 15:54:23.719" level="INFO">Typing text '1111' into text field '//input[@id='repeatPassword']'</msg>
-<status status="PASS" endtime="20160405 15:54:24.011" starttime="20160405 15:54:23.718"></status>
+<msg timestamp="20160413 15:55:31.200" level="INFO">Typing text '1111' into text field '//input[@id='repeatPassword']'</msg>
+<status status="PASS" endtime="20160413 15:55:31.445" starttime="20160413 15:55:31.199"></status>
 </kw>
 <kw name="Select From List By Label" library="Selenium2Library">
 <doc>Selects `*labels` from list identified by `locator`</doc>
@@ -262,8 +311,8 @@
 <arg>${Reffered_coach_rep_no_new_user_p90x}</arg>
 <arg>Rep Number</arg>
 </arguments>
-<msg timestamp="20160405 15:54:24.014" level="INFO">Selecting label(s) 'Rep Number' from list '//select[@id='coach-search-criteria-type']'.</msg>
-<status status="PASS" endtime="20160405 15:54:24.997" starttime="20160405 15:54:24.012"></status>
+<msg timestamp="20160413 15:55:31.446" level="INFO">Selecting label(s) 'Rep Number' from list '//select[@id='coach-search-criteria-type']'.</msg>
+<status status="PASS" endtime="20160413 15:55:32.279" starttime="20160413 15:55:31.445"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -271,48 +320,51 @@
 <arg>${Reffered_coach_filled_rep_no_new_user_p90x}</arg>
 <arg>${reffering_coach_id}</arg>
 </arguments>
-<msg timestamp="20160405 15:54:24.999" level="INFO">Typing text '994' into text field '//input[@id='coach-search-criteria-value']'</msg>
-<status status="PASS" endtime="20160405 15:54:25.387" starttime="20160405 15:54:24.998"></status>
+<msg timestamp="20160413 15:55:32.281" level="INFO">Typing text '994' into text field '//input[@id='coach-search-criteria-value']'</msg>
+<status status="PASS" endtime="20160413 15:55:32.550" starttime="20160413 15:55:32.280"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>${Reffered_confirm_coach_new_user_p90x}</arg>
 </arguments>
-<status status="PASS" endtime="20160405 15:54:25.576" starttime="20160405 15:54:25.388"></status>
+<status status="PASS" endtime="20160413 15:55:32.687" starttime="20160413 15:55:32.551"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${Reffered_confirm_coach_new_user_p90x}</arg>
 </arguments>
-<msg timestamp="20160405 15:54:25.578" level="INFO">Clicking element '//a[contains(text(),'Confirm Coach')]'.</msg>
-<status status="PASS" endtime="20160405 15:54:26.285" starttime="20160405 15:54:25.576"></status>
+<msg timestamp="20160413 15:55:32.689" level="INFO">Clicking element '//a[contains(text(),'Confirm Coach')]'.</msg>
+<status status="PASS" endtime="20160413 15:55:33.008" starttime="20160413 15:55:32.688"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>${Reffered_confirm_coach_text_new_user_p90x}</arg>
 </arguments>
-<status status="PASS" endtime="20160405 15:54:27.341" starttime="20160405 15:54:26.286"></status>
+<status status="PASS" endtime="20160413 15:55:33.866" starttime="20160413 15:55:33.009"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${term_and_condition_p90x}</arg>
 </arguments>
-<msg timestamp="20160405 15:54:27.343" level="INFO">Clicking element '//input[@id='termsAndConditionsAcceptedChkBox']'.</msg>
-<status status="PASS" endtime="20160405 15:54:27.733" starttime="20160405 15:54:27.341"></status>
+<msg timestamp="20160413 15:55:33.868" level="INFO">Clicking element '//input[@id='termsAndConditionsAcceptedChkBox']'.</msg>
+<status status="PASS" endtime="20160413 15:55:34.183" starttime="20160413 15:55:33.867"></status>
 </kw>
+<status status="PASS" endtime="20160413 15:55:34.184" starttime="20160413 15:55:30.628"></status>
+</kw>
+<kw name="Click continue button in P90x shop account Page" library="Keywords">
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks a button identified by `locator`.</doc>
 <arguments>
-<arg>${click_continue_Create_account_page_p90x}</arg>
+<arg>${click_continue_shop_page_p90x}</arg>
 </arguments>
-<msg timestamp="20160405 15:54:27.736" level="INFO">Clicking button '//input[@id='qual-updateAccountProfileBtn']'.</msg>
-<status status="PASS" endtime="20160405 15:54:34.854" starttime="20160405 15:54:27.734"></status>
+<msg timestamp="20160413 15:55:34.188" level="INFO">Clicking button 'id=cert-updateAccountProfileBtn'.</msg>
+<status status="PASS" endtime="20160413 15:55:41.843" starttime="20160413 15:55:34.187"></status>
 </kw>
-<status status="PASS" endtime="20160405 15:54:34.854" starttime="20160405 15:54:23.046"></status>
+<status status="PASS" endtime="20160413 15:55:41.844" starttime="20160413 15:55:34.186"></status>
 </kw>
 <kw name="fill payment Information in P90x" library="Keywords">
 <kw name="Input Text" library="Selenium2Library">
@@ -321,8 +373,8 @@
 <arg>${credit_card_no_p90x_payment_page}</arg>
 <arg>${credit_card_no}</arg>
 </arguments>
-<msg timestamp="20160405 15:54:34.858" level="INFO">Typing text '1111111111111111' into text field 'id=creditCardNumber'</msg>
-<status status="PASS" endtime="20160405 15:54:35.148" starttime="20160405 15:54:34.857"></status>
+<msg timestamp="20160413 15:55:41.849" level="INFO">Typing text '1111111111111111' into text field 'id=creditCardNumber'</msg>
+<status status="PASS" endtime="20160413 15:55:42.466" starttime="20160413 15:55:41.847"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -330,8 +382,8 @@
 <arg>${credit_Card_security_pin_p90x}</arg>
 <arg>${credit_Card_pin}</arg>
 </arguments>
-<msg timestamp="20160405 15:54:35.150" level="INFO">Typing text '123' into text field '//input[@name='securityCode']'</msg>
-<status status="PASS" endtime="20160405 15:54:35.436" starttime="20160405 15:54:35.149"></status>
+<msg timestamp="20160413 15:55:42.468" level="INFO">Typing text '123' into text field 'name=securityCode'</msg>
+<status status="PASS" endtime="20160413 15:55:42.932" starttime="20160413 15:55:42.466"></status>
 </kw>
 <kw name="Select From List By Label" library="Selenium2Library">
 <doc>Selects `*labels` from list identified by `locator`</doc>
@@ -339,8 +391,8 @@
 <arg>${credit_Card_month_p90x}</arg>
 <arg>Jun</arg>
 </arguments>
-<msg timestamp="20160405 15:54:35.440" level="INFO">Selecting label(s) 'Jun' from list '//select[@id='monthpicker']'.</msg>
-<status status="PASS" endtime="20160405 15:54:36.217" starttime="20160405 15:54:35.437"></status>
+<msg timestamp="20160413 15:55:42.933" level="INFO">Selecting label(s) 'Jun' from list 'id=monthpicker'.</msg>
+<status status="PASS" endtime="20160413 15:55:43.817" starttime="20160413 15:55:42.932"></status>
 </kw>
 <kw name="Select From List By Label" library="Selenium2Library">
 <doc>Selects `*labels` from list identified by `locator`</doc>
@@ -348,42 +400,15 @@
 <arg>${credit_Card_year_p90x}</arg>
 <arg>2020</arg>
 </arguments>
-<msg timestamp="20160405 15:54:36.219" level="INFO">Selecting label(s) '2020' from list '//select[@id='yearpicker']'.</msg>
-<status status="PASS" endtime="20160405 15:54:37.153" starttime="20160405 15:54:36.218"></status>
+<msg timestamp="20160413 15:55:43.818" level="INFO">Selecting label(s) '2020' from list 'id=yearpicker'.</msg>
+<status status="PASS" endtime="20160413 15:55:44.636" starttime="20160413 15:55:43.818"></status>
 </kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>${term_and_condition_payment_info_page}</arg>
-</arguments>
-<msg timestamp="20160405 15:54:37.155" level="INFO">Clicking element 'id=paymentTermsAndConditionsChkBox'.</msg>
-<status status="PASS" endtime="20160405 15:54:37.715" starttime="20160405 15:54:37.154"></status>
+<status status="PASS" endtime="20160413 15:55:44.637" starttime="20160413 15:55:41.845"></status>
 </kw>
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>${click_purchase_on_payment_page_p90x}</arg>
-</arguments>
-<msg timestamp="20160405 15:54:37.717" level="INFO">Clicking button 'id=qual-purchaseBtn'.</msg>
-<status status="PASS" endtime="20160405 15:54:44.553" starttime="20160405 15:54:37.716"></status>
-</kw>
-<status status="PASS" endtime="20160405 15:54:44.553" starttime="20160405 15:54:34.855"></status>
-</kw>
-<kw name="Verify qualification is purchased on P90X" library="Keywords">
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>${verify_qualification_confirmation_page_p90x}</arg>
-<arg>timeout=40s</arg>
-</arguments>
-<status status="PASS" endtime="20160405 15:54:54.046" starttime="20160405 15:54:44.556"></status>
-</kw>
-<status status="PASS" endtime="20160405 15:54:54.046" starttime="20160405 15:54:44.554"></status>
-</kw>
-<status status="PASS" endtime="20160405 15:54:54.048" critical="yes" starttime="20160405 15:52:41.385"></status>
+<status status="PASS" endtime="20160413 15:55:44.641" critical="yes" starttime="20160413 15:53:53.251"></status>
 </test>
 <doc>Suite description</doc>
-<status status="PASS" endtime="20160405 15:54:54.054" starttime="20160405 15:52:37.313"></status>
+<status status="PASS" endtime="20160413 15:55:44.648" starttime="20160413 15:53:52.474"></status>
 </suite>
 <statistics>
 <total>
@@ -393,7 +418,7 @@
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="P90x Purchase Qualification" pass="1">P90x Purchase Qualification</stat>
+<stat fail="0" id="s1" name="p90x Purchase Product Shop page" pass="1">p90x Purchase Product Shop page</stat>
 </suite>
 </statistics>
 <errors>

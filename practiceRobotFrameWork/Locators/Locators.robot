@@ -66,3 +66,19 @@ ${click_continue_Create_account_page_p90x}          //input[@id='qual-updateAcco
 ${instructor_workshop_p90x}              //*[@id='nav']/li[1]/a
 ${register_instructor_workshop_p90x}     //*[@id='certEnrollNow']
 ${enrol_button_p90x}                     //*[@id='enrollRow']/input
+
+${shop_button_global_navigation_p90x}       //ul[@id='nav']/li[4]/a
+${shop_page_verification_text}              //div[@class='bannerText']/h2[contains(text(),'Shop all P90X Products')]
+${select_a_product_on_p90x_shop}            //img[@title='P90X Jayne X-Cross Tank']
+${select_size_on_p90x_shop_page}            //select[@id='attributes']
+${add_to_cart_p90x_Shop_page}               //button[contains(text(),'Add to cart')]
+${view_mini_cart_p90x_shop_page}            //a[contains(text(),'View Cart')]
+${click_chackout_on_cart_page_p90x}         //div[@id='megaCartContainer']/ul[2]/li[2]/a
+ ${click_continue_shipping_Info_shop_page_p90x}     id=cert-ship-info-cont
+ ${click_continue_shop_page_p90x}                   id=cert-updateAccountProfileBtn
+ ${credit_card_no_p90x_payment_page}            id=creditCardNumber
+ ${credit_Card_security_pin_p90x}               name=securityCode
+ ${credit_Card_month_p90x}                      id=monthpicker
+ ${credit_Card_year_p90x}                       id=yearpicker
+ ${term_and_condition_payment_info_page}
+ ${click_purchase_on_payment_page_p90x}         //input[@value='Purchase']

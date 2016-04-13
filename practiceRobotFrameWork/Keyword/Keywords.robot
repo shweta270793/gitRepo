@@ -144,7 +144,11 @@ fill shiping information page in p90x
         select from list by label          ${new_user_state_p90x}             ${shipping_state_value}
         input text          ${new_user_zip_code_p90x}         ${shipping_zip_value}
         input text          ${new_user_phone_no_p90x}          ${free_phone_value}
+
+
+Click continue button in P90x Qualification shipping information Page
         click button        ${continue_after_fill_shipping_info}
+
 
 fill create account page in p90x
         ${screenname_p90x}    generate random string    15    [LETTERS][NUMBERS]
@@ -157,14 +161,21 @@ fill create account page in p90x
         click element             ${Reffered_confirm_coach_new_user_p90x}
         wait until element is visible        ${Reffered_confirm_coach_text_new_user_p90x}
         click element           ${term_and_condition_p90x}
+
+
+Click continue button in P90x Qualification account Page
         click button        ${click_continue_Create_account_page_p90x}
+
 fill payment Information in P90x
         input text        ${credit_card_no_p90x_payment_page}      ${credit_card_no}
         input text          ${credit_Card_security_pin_p90x}        ${credit_Card_pin}
         select from list by label           ${credit_Card_month_p90x}           Jun
          select from list by label          ${credit_Card_year_p90x}            2020
-         click element          ${term_and_condition_payment_info_page}
-         click button         ${click_purchase_on_payment_page_p90x}
+       #  click element          ${term_and_condition_payment_info_page}
+
+
+Click continue button in P90x Qualification payment information Page
+        click button         ${click_purchase_on_payment_page_p90x}
 
 Verify qualification is purchased on P90X
         wait until element is visible     ${verify_qualification_confirmation_page_p90x}        timeout=40s
@@ -174,8 +185,18 @@ Click on shop in the global navigation p90x
 Verify that shop page is open and select a product
         wait until element is visible           ${shop_page_verification_text}
         click element                ${select_a_product_on_p90x_shop}
-        select from list by label       ${select_size_on_p90x_shop_page}        XL-marine/charcoal
+        select from list by label       ${select_size_on_p90x_shop_page}        M-purple
+        click element           ${add_to_cart_p90x_Shop_page}
 
+Verify that mini cart is open in p90x shop page
+        wait until element is visible           ${view_mini_cart_p90x_shop_page}
+        click element                            ${view_mini_cart_p90x_shop_page}
+        click element                        ${click_chackout_on_cart_page_p90x}
 
+Click continue button in P90x shop shipping info Page
+        click button        ${click_continue_shipping_Info_shop_page_p90x}
 
-
+Click continue button in P90x shop account Page
+        click button        ${click_continue_shop_page_p90x}
+Click continue button in p90x payment imfo page
+        click button       ${click_purchase_on_payment_page_p90x}

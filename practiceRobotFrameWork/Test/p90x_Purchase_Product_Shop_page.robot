@@ -4,12 +4,16 @@ Library  Selenium2Library
 Resource  ../Keyword/Keywords.robot
 *** Test Cases ***
 Test P90x Certification site
-    open P90x site on browser
-    maximize browser window
+   open P90x site on browser
+   maximize browser window
    Click on shop in the global navigation p90x
    Verify that shop page is open and select a product
+   Verify that mini cart is open in p90x shop page
    On the checkout page, enter a new email address to enroll a new customer P90x
    fill shiping information page in p90x
+   Click continue button in P90x shop shipping info Page
    fill create account page in p90x
+   Click continue button in P90x shop account Page
    fill payment Information in P90x
+
   [Teardown]
