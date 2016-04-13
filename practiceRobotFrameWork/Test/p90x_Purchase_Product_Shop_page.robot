@@ -15,5 +15,6 @@ Test P90x Certification site
    fill create account page in p90x
    Click continue button in P90x shop account Page
    fill payment Information in P90x
-
+   Click continue button in p90x payment imfo page
+    Verify product is purchased on P90X
   [Teardown]

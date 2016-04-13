@@ -82,3 +82,4 @@ ${click_chackout_on_cart_page_p90x}         //div[@id='megaCartContainer']/ul[2]
  ${credit_Card_year_p90x}                       id=yearpicker
  ${term_and_condition_payment_info_page}
  ${click_purchase_on_payment_page_p90x}         //input[@value='Purchase']
+ ${shop_order_confirmation_page_p90x}           id=confirmation-cert-home-track

@@ -191,6 +191,7 @@ Verify that shop page is open and select a product
 Verify that mini cart is open in p90x shop page
         wait until element is visible           ${view_mini_cart_p90x_shop_page}
         click element                            ${view_mini_cart_p90x_shop_page}
+        wait until element is visible            ${click_chackout_on_cart_page_p90x}
         click element                        ${click_chackout_on_cart_page_p90x}
 
 Click continue button in P90x shop shipping info Page
@@ -200,3 +201,6 @@ Click continue button in P90x shop account Page
         click button        ${click_continue_shop_page_p90x}
 Click continue button in p90x payment imfo page
         click button       ${click_purchase_on_payment_page_p90x}
+
+Verify product is purchased on P90X
+        wait until element is visible           ${shop_order_confirmation_page_p90x}
