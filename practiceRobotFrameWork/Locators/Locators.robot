@@ -87,3 +87,4 @@ ${click_chackout_on_cart_page_p90x}         //div[@id='megaCartContainer']/ul[2]
 ${click_continue_certification_page_p90x}                   id=cert-updateAccountProfileBtn
 ${click_purchase_on_certification_payment_page_p90x}        id=cert-purchaseBtn
 ${confirm_certification_purchase_p90x}                      id=confirmation-cert-home-track
+${verify_qualification_confirmation_page_p90x}          id=confirmation-qual-home-track
