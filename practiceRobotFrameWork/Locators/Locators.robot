@@ -80,6 +80,10 @@ ${click_chackout_on_cart_page_p90x}         //div[@id='megaCartContainer']/ul[2]
  ${credit_Card_security_pin_p90x}               name=securityCode
  ${credit_Card_month_p90x}                      id=monthpicker
  ${credit_Card_year_p90x}                       id=yearpicker
- ${term_and_condition_payment_info_page}
+ ${term_and_condition_payment_info_page}        id=paymentTermsAndConditionsChkBox
  ${click_purchase_on_payment_page_p90x}         //input[@value='Purchase']
  ${shop_order_confirmation_page_p90x}           id=confirmation-cert-home-track
+ ${click_continue_shipping_Info_certification_page_p90x}      id=cert-ship-info-cont
+${click_continue_certification_page_p90x}                   id=cert-updateAccountProfileBtn
+${click_purchase_on_certification_payment_page_p90x}        id=cert-purchaseBtn
+${confirm_certification_purchase_p90x}                      id=confirmation-cert-home-track

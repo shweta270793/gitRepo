@@ -205,3 +205,15 @@ Click continue button in p90x payment imfo page
 
 Verify product is purchased on P90X
         wait until element is visible           ${shop_order_confirmation_page_p90x}
+
+Click continue button in P90x certification shipping info Page
+        click button        ${click_continue_shipping_Info_certification_page_p90x}
+
+Click continue button in P90x certtification account Page
+        click button        ${click_continue_certification_page_p90x}
+Click continue button in p90x certification imfo page
+        click element          ${term_and_condition_payment_info_page}
+        click button       ${click_purchase_on_certification_payment_page_p90x}
+
+Verify certification is purchased on P90X
+        wait until element is visible           ${confirm_certification_purchase_p90x}
