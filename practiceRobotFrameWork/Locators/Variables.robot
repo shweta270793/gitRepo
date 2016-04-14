@@ -1,7 +1,7 @@
 *** Variables ***
 ${BodybeastURL}  http://wave1bodybeastdevint.productpartners.com/
 ${TbbMainSiteUrl}   http://wave1tbbdevint.productpartners.com/home
-${p90x_Certification_URL}     http://p90xcertification.tbbint.com
+${p90x_Certification_URL}     http://wave1p90xcertificationdevint.productpartners.com
 ${UserName}     test3419@yopmail.com
 ${Password}    1111
 ${firstname}    firstname
