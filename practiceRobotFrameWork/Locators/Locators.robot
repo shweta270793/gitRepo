@@ -69,7 +69,7 @@ ${enrol_button_p90x}                     //*[@id='enrollRow']/input
 
 ${shop_button_global_navigation_p90x}       //ul[@id='nav']/li[4]/a
 ${shop_page_verification_text}              //div[@class='bannerText']/h2[contains(text(),'Shop all P90X Products')]
-${select_a_product_on_p90x_shop}            //img[@title='P90X Jayne X-Cross Tank']
+${select_a_product_on_p90x_shop}            //a[@data-product-sku='MDAPP9X1758']/img
 ${select_size_on_p90x_shop_page}            //select[@id='attributes']
 ${add_to_cart_p90x_Shop_page}               //button[contains(text(),'Add to cart')]
 ${view_mini_cart_p90x_shop_page}            //a[contains(text(),'View Cart')]
@@ -88,3 +88,4 @@ ${click_continue_certification_page_p90x}                   id=cert-updateAccoun
 ${click_purchase_on_certification_payment_page_p90x}        id=cert-purchaseBtn
 ${confirm_certification_purchase_p90x}                      id=confirmation-cert-home-track
 ${verify_qualification_confirmation_page_p90x}          id=confirmation-qual-home-track
+${select_category_of_product_p90x}                      //ul[@id='filter']/li/ul[1]/li/ul[1]/li/ul[1]/li/a

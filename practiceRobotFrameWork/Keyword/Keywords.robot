@@ -185,8 +185,10 @@ Click on shop in the global navigation p90x
         click element       ${shop_button_global_navigation_p90x}
 Verify that shop page is open and select a product
         wait until element is visible           ${shop_page_verification_text}
+        click element               ${select_category_of_product_p90x}
+        wait until element is visible           ${select_a_product_on_p90x_shop}
         click element                ${select_a_product_on_p90x_shop}
-        select from list by label       ${select_size_on_p90x_shop_page}        M-purple
+        select from list by label       ${select_size_on_p90x_shop_page}        XS-black
         click element           ${add_to_cart_p90x_Shop_page}
 
 Verify that mini cart is open in p90x shop page
