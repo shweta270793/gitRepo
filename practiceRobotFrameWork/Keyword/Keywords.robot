@@ -175,6 +175,7 @@ fill payment Information in P90x
 
 
 Click continue button in P90x Qualification payment information Page
+        click element          ${term_and_condition_payment_info_page}
         click button         ${click_purchase_on_payment_page_p90x}
 
 Verify qualification is purchased on P90X

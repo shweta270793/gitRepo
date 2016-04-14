@@ -3,7 +3,7 @@ Documentation    Suite description
 Library  Selenium2Library
 Resource  ../Keyword/Keywords.robot
 *** Test Cases ***
-Test P90x shop 
+Test P90x shop
    open P90x site on browser
    maximize browser window
    Click on shop in the global navigation p90x
